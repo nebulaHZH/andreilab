@@ -109,13 +109,10 @@ const submit = () => {
         alert("请上传影像数据")
         return
     }
-    if(source.value == "一维脑电信号"){
-        result.value = "脑电信号输出概率为"+Math.floor(Math.random() * 10+90 )+"%,"+"系统诊断病人为"+level[Math.floor(Math.random() *3 )]+"期\n"
-    }else if(source.value == "医学图像"){
-        result.value = "医学图像输出概率为"+Math.floor(Math.random() * 10+90 )+"%,"+"系统诊断病人为"+level[Math.floor(Math.random() *3 )]+"期\n"
-    }else if(source.value == "脑电信号+医学图像特征融合结果"){
-        result.value = "特征融合最终输出概率为"+Math.floor(Math.random() * 10+90 )+"%,"+"系统诊断病人为"+level[Math.floor(Math.random() *3 )]+"期\n"
-    }
+    result.value = "脑电信号输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
+        "医学图像输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
+        "特征融合最终输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
+        "系统诊断病人为"+level[Math.floor(Math.random() *3 )]+"期\n"
     // ! 有算法后解开下面的注释
     // platform.submit(type.value, disease.value,fileList.value, source.value ).then(res => {
     //     console.log(res)
