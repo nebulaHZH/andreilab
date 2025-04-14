@@ -111,7 +111,8 @@ const submit = () => {
     }
     result.value = "脑电信号输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
         "医学图像输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
-        "特征融合最终输出概率为"+Math.floor(Math.random() * 10+90 )+"%"
+        "特征融合最终输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
+        "系统诊断病人为阿尔兹海默症"
     // ! 有算法后解开下面的注释
     // platform.submit(type.value, disease.value,fileList.value, source.value ).then(res => {
     //     console.log(res)
