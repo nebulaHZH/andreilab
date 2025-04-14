@@ -79,7 +79,7 @@ const types = ref([
     { value: '单人诊断', label: '单人诊断' },
     { value: '批量诊断', label: '批量诊断' }
 ])
-const level = ["Ⅰ","Ⅱ","Ⅲ"]
+// const level = ["Ⅰ","Ⅱ","Ⅲ"]
 const diseases = ref([
     { value: '肿瘤分期', label: '肿瘤分期' },
     { value: '阿尔兹海默症', label: '阿尔兹海默症' }
@@ -111,8 +111,7 @@ const submit = () => {
     }
     result.value = "脑电信号输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
         "医学图像输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
-        "特征融合最终输出概率为"+Math.floor(Math.random() * 10+90 )+"%,\n"+
-        "系统诊断病人为"+level[Math.floor(Math.random() *3 )]+"期\n"
+        "特征融合最终输出概率为"+Math.floor(Math.random() * 10+90 )+"%"
     // ! 有算法后解开下面的注释
     // platform.submit(type.value, disease.value,fileList.value, source.value ).then(res => {
     //     console.log(res)
@@ -133,8 +132,6 @@ const submit = () => {
 .main {
     width: 100%;
     height: 98vh;
-    background-image: url('/src/assets/科幻科技.png');
-    background-repeat: no-repeat;
     overflow: auto;
     background-size: cover;
     border-radius: 10px;
